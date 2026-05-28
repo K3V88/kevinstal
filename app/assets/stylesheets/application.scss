@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+ @import "bootstrap";
+@import "components/navbar";
+@import "components/footer";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  font-family: Avenir, sans-serif;
+  margin: 0;
+  background: white;
+}
+
+/* REMOVE height: 100vh */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+
+/* Yellow diagonal right section */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: #ffd84d;
+
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-panel {
+  position: relative;
+  z-index: 1;
+}
+
+/* optional spacing + alignment feel */
+.contact-box {
+  display: inline-block;
+}
+
+/* MAIN 2-COLUMN LAYOUT */
+.hero-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; /* big space between left and right */
+  align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.hero-left {
+  flex: 1;
+}
+
+/* RIGHT SIDE (on yellow area visually) */
+.hero-right {
+  width: 300px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hero-right {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.clean-link {
+  color: black;
+  text-decoration: none;
+  transition: color 0.25s ease
+}
+
+.clean-link:hover {
+  color: gray;
+  text-decoration: underline;
+}

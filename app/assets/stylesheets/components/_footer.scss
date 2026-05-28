@@ -1,0 +1,9 @@
+.footer-icon {
+  color: white;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-icon:hover {
+  color: #ffd84d;
+  transform: translateY(-2px);
+}

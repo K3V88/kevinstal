@@ -1,0 +1,262 @@
+/* =========================
+   BASE NAVBAR LAYOUT
+   ========================= */
+
+.navbar-custom {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* LEFT: BRAND */
+.logo-font {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #ffd84d !important;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   CENTER NAV (DESKTOP ONLY)
+   ========================= */
+
+@media (min-width: 768px) {
+
+  .navbar-collapse {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0 auto;
+  }
+}
+
+/* =========================
+   MOBILE NAV FIX
+   ========================= */
+
+@media (max-width: 767.98px) {
+
+  .navbar-collapse {
+    width: 100%;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+}
+
+/* =========================
+   RIGHT SIDE GROUP (FLAGS + HAMBURGER)
+   ========================= */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: auto;
+}
+
+/* =========================
+   LANGUAGE SWITCHER
+   ========================= */
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+}
+
+/* LINKS */
+.lang-link {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.lang-link:hover {
+  opacity: 1;
+  color: #ffd84d;
+}
+
+.lang-link.active {
+  opacity: 1;
+  color: #ffd84d;
+  font-weight: bold;
+}
+
+/* =========================
+   DESKTOP LANGUAGE STYLE
+   ========================= */
+
+@media (min-width: 768px) {
+
+  .lang-switcher {
+    padding-left: 1.5rem;
+  }
+
+  .lang-desktop {
+    display: inline;
+  }
+
+  .lang-mobile-flag {
+    display: none;
+  }
+
+  .lang-link {
+    padding: 0 0.8rem;
+  }
+
+  .lang-link + .lang-link {
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+  }
+}
+
+/* =========================
+   MOBILE LANGUAGE STYLE
+   ========================= */
+
+@media (max-width: 767.98px) {
+
+  .lang-desktop {
+    display: none;
+  }
+
+  .lang-mobile-flag {
+    display: inline;
+    font-size: 1.1rem;
+  }
+
+  /* STACK FLAGS VERTICALLY */
+  .lang-switcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .lang-link {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* =========================
+   NAV LINKS STYLE
+   ========================= */
+
+.nav-underline {
+  position: relative;
+}
+
+/* DESKTOP underline effect */
+@media (min-width: 768px) {
+
+  .nav-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: #ffd84d;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.35s ease;
+  }
+
+  .nav-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+/* MOBILE highlight effect */
+@media (max-width: 767.98px) {
+
+  .nav-underline {
+    display: block;
+    width: 100%;
+    padding: 0.4rem 0.4rem;
+  }
+
+  .nav-underline::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 0%;
+    background: rgba(255, 216, 77, 0.3);
+    transition: width 0.35s ease;
+    z-index: -1;
+  }
+
+  .nav-underline:hover::after {
+    width: 100%;
+  }
+}
+
+/* =========================
+   HAMBURGER
+   ========================= */
+
+.custom-toggler {
+  width: 40px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.custom-toggler span {
+  height: 2px;
+  background: #fff;
+  transition: all 0.35s ease;
+}
+
+/* animation */
+.custom-toggler[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(14px) rotate(45deg);
+}
+
+.custom-toggler[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.custom-toggler[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-14px) rotate(-45deg);
+}
+
+/* =========================
+   COLLAPSE ANIMATION
+   ========================= */
+
+@media (max-width: 767.98px) {
+
+  .navbar-collapse {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.35s ease;
+  }
+
+  .navbar-collapse.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-top-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
