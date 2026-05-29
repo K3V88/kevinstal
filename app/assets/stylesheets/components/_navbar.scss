@@ -30,8 +30,13 @@
   }
   .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 3rem;
     margin: 0 auto;
+    align-items: center;
+  }
+
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding: 0;
   }
 }
 
@@ -154,6 +159,7 @@
 
 .nav-underline {
   position: relative;
+  padding: 0;
 }
 
 /* DESKTOP underline effect */
@@ -184,7 +190,7 @@
   .nav-underline {
     display: block;
     width: 100%;
-    padding: 0.4rem 0.4rem;
+    padding: 10px 10px;
   }
 
   .nav-underline::after {

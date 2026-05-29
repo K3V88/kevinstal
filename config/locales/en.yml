@@ -3,3 +3,91 @@ en:
     home: "Home"
     about: "About"
     contact: "Contact"
+
+  home:
+    hero:
+      title: "Clean code. Modern web applications."
+      subtitle: "Ruby on Rails developer building fast, scalable applications with PostgreSQL, JavaScript, and modern UI practices."
+
+    sections:
+      what_i_can_build: "What I build"
+      tech_stack: "Tech Stack"
+      languages: "Languages"
+      dutch: "Dutch"
+      german: "German"
+      english: "English"
+
+    building:
+      static_sites: "Static websites such as landing pages and portfolios"
+      auth_apps: "Web applications with authentication using Devise"
+      database_apps: "Database-driven applications with PostgreSQL and ActiveRecord"
+      frontend: "Interactive frontends using JavaScript"
+      backend: "Backend development with Ruby and Ruby on Rails"
+      multilingual: "Multilingual applications in English, German, and Dutch"
+
+    tech:
+      frontend: "Frontend"
+      backend: "Backend"
+      tools: "Tools & Deployment"
+
+    location: "Based in Switzerland"
+  about:
+    hero:
+      title: "Who am I?"
+      subtitle: "A short introduction about me and what I do."
+
+    sections:
+      about_me: "About Me"
+      facts: "Facts"
+
+    description: >
+        My name is Kevin Stal. I was born and raised in Ermelo, the Netherlands, and grew up bilingually speaking Dutch and German. From an early age, I developed a strong affinity for languages and different cultures, which shaped the way I think and communicate.
+        <br><br>
+        From a young age, I have been fascinated by how programming languages can be used to turn simple ideas into real, working products.
+        <br><br>
+        After studying International Business and languages in the Netherlands, I relocated to Switzerland. Where I gained professional experience in the airline industry before moving into programming. Today, I am a passionate Ruby on Rails developer focused on building clean, scalable, and maintainable web applications.
+
+    facts:
+      name: "Name"
+      age: "Age"
+      nationality: "Nationality"
+      nationality_list: "Dutch, Swiss"
+      hobbies: "Hobbies"
+      cities: "Favourite Cities"
+      food: "Favourite Food"
+      food_list: "Chinese, Italian"
+      sports: "Favourite Sport"
+      sports_list: "Motorsport (Formula 1, MotoGP, WEC)"
+  contact:
+    hero:
+      title: "Get in touch"
+      subtitle: "I look forward to hearing from you! Please don’t hesitate to contact me using the form below or to send me an email directly."
+    info:
+      name_label: "Name"
+      name_value: "Kevin Stal"
+
+      email_label: "Email"
+
+      linkedin_label: "LinkedIn"
+      linkedin_text: "View profile"
+      linkedin_url: "https://www.linkedin.com/in/your-profile"
+
+      github_label: "GitHub"
+      github_text: "K3V88"
+      github_url: "https://github.com/your-username"
+
+      location_label: "Location"
+      location_value: "Switzerland"
+
+      availability: "Open to freelance projects, collaborations, and interesting ideas."
+    form:
+      name_label: "Name"
+      name_placeholder: "Your name"
+
+      email_label: "Email"
+      email_placeholder: "your@email.com"
+
+      message_label: "Message"
+      message_placeholder: "Write your message..."
+
+      submit: "Send"

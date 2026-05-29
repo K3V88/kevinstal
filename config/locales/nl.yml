@@ -3,3 +3,94 @@ nl:
     home: "Home"
     about: "Over mij"
     contact: "Contact"
+
+  home:
+    hero:
+      title: "Robuuste code. Moderne webapplicaties."
+      subtitle: "Ruby on Rails ontwikkelaar die snelle en schaalbare applicaties bouwt met PostgreSQL, JavaScript en moderne UI-praktijken."
+
+    sections:
+      what_i_can_build: "Wat ik bouw"
+      tech_stack: "Tech Stack"
+      languages: "Talen"
+      dutch: "Nederlands"
+      german: "Duits"
+      english: "Engels"
+
+    building:
+      static_sites: "Statische websites zoals landingspagina’s en portfolio’s"
+      auth_apps: "Webapplicaties met authenticatie via Devise"
+      database_apps: "Datagedreven applicaties met PostgreSQL en ActiveRecord"
+      frontend: "Interactieve frontends met JavaScript"
+      backend: "Backend-ontwikkeling met Ruby en Ruby on Rails"
+      multilingual: "Meertalige applicaties in het Nederlands, Engels en Duits"
+
+    tech:
+      frontend: "Frontend"
+      backend: "Backend"
+      tools: "Tools & Deployment"
+
+    location: "Gevestigd in Zwitserland"
+
+  about:
+    hero:
+      title: "Wie ben ik?"
+      subtitle: "Een korte introductie over mij en wat ik doe."
+
+    sections:
+      about_me: "Over mij"
+      facts: "Feiten"
+
+    description: >
+        Mijn naam is Kevin Stal. Ik ben geboren en getogen in Ermelo, Nederland, en ben tweetalig opgegroeid met Nederlands en Duits. Al op jonge leeftijd ontwikkelde ik een sterke affiniteit met talen en verschillende culturen, wat sterk heeft bijgedragen aan mijn manier van denken en communiceren.
+        <br><br>
+        Van jongs af aan ben ik al gefascineerd door hoe programmeertalen gebruikt kunnen worden om van eenvoudige ideeën echte, werkende producten te maken.
+        <br><br>
+        Na mijn studie International Business en Languages in Nederland ben ik naar Zwitserland verhuisd, waar ik professionele ervaring heb opgedaan in de luchtvaartindustrie voordat ik de overstap maakte naar programmeren. Vandaag de dag ben ik een gepassioneerde Ruby on Rails-ontwikkelaar die zich richt op het bouwen van strakke, schaalbare en onderhoudbare webapplicaties.
+
+    facts:
+      name: "Naam"
+      age: "Leeftijd"
+      nationality: "Nationaliteit"
+      nationality_list: "Zwitsers, Nederlands"
+      hobbies: "Hobby's"
+      cities: "Favoriete steden"
+      food: "Favoriete eten"
+      food_list: "Chinees, Italiaans"
+      sports: "Favoriete sport"
+      sports_list: "Motorsport (Formule 1, MotoGP, WEC)"
+
+  contact:
+    hero:
+      title: "Contacteer mij"
+      subtitle: "Ik kijk ernaar uit om van je te horen! Neem gerust contact met me op via het onderstaande formulier of stuur me direct een e-mail."
+    info:
+      name_label: "Naam"
+      name_value: "Kevin Stal"
+      title: "Contactgegevens"
+
+      email_label: "E-mail"
+
+      linkedin_label: "LinkedIn"
+      linkedin_text: "Profiel bekijken"
+      linkedin_url: "https://www.linkedin.com/in/your-profile"
+
+      github_label: "GitHub"
+      github_text: "K3V88"
+      github_url: "https://github.com/your-username"
+
+      location_label: "Locatie"
+      location_value: "Zwitserland"
+
+      availability: "Open voor freelance projecten, samenwerkingen en interessante ideeën."
+    form:
+      name_label: "Naam"
+      name_placeholder: "Jouw naam"
+
+      email_label: "E-mail"
+      email_placeholder: "jouw@email.nl"
+
+      message_label: "Bericht"
+      message_placeholder: "Schrijf je bericht..."
+
+      submit: "Versturen"

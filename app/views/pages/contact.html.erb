@@ -1,0 +1,101 @@
+<div class="container py-5 hero-content">
+
+  <div class="hero-grid">
+
+    <!-- LEFT: CONTACT FORM -->
+    <div class="hero-left-contact">
+
+      <h1 class="fw-bold mb-4">
+        <%= t("contact.hero.title", default: "Get in touch") %>
+      </h1>
+
+      <p class="text-muted mb-4 hero-text">
+        <%= t("contact.hero.subtitle", default: "Feel free to reach out. I usually respond within a few days.") %>
+      </p>
+
+     <%= form_with url: contact_path, method: :post, local: true do |f| %>
+
+  <div class="mb-3">
+    <label class="form-label d-block text-start w-100">
+      <%= t("contact.form.name_label") %>
+    </label>
+    <%= f.text_field :name,
+      class: "form-control",
+      placeholder: t("contact.form.name_placeholder") %>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label d-block text-start w-100">
+      <%= t("contact.form.email_label") %>
+    </label>
+    <%= f.email_field :email,
+      class: "form-control",
+      placeholder: t("contact.form.email_placeholder") %>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label d-block text-start w-100">
+      <%= t("contact.form.message_label") %>
+    </label>
+    <%= f.text_area :message,
+      class: "form-control",
+      rows: 5,
+      placeholder: t("contact.form.message_placeholder") %>
+  </div>
+
+  <%= f.submit t("contact.form.submit"), class: "btn btn-dark px-4 mt-2" %>
+
+<% end %>
+
+    </div>
+
+    <!-- RIGHT: CONTACT INFO -->
+    <div class="hero-right-contact">
+
+      <div class="contact-box">
+
+        <h5 class="mb-4">
+          <%= t("contact.info.title", default: "Contact information") %>
+        </h5>
+
+       <p class="mb-2">
+  <strong><%= t("contact.info.name_label") %>:</strong>
+  <%= t("contact.info.name_value") %>
+</p>
+
+<p class="mb-2">
+  <strong><%= t("contact.info.email_label") %>:</strong>
+  <a href="mailto:kevin.stal@gmx.ch" class="clean-link">
+    kevin.stal@gmx.ch
+  </a>
+</p>
+
+<p class="mb-2">
+  <strong><%= t("contact.info.linkedin_label") %>:</strong>
+  <a href="<%= t('contact.info.linkedin_url') %>" target="_blank" class="clean-link">
+    <%= t("contact.info.linkedin_text") %>
+  </a>
+</p>
+
+<p class="mb-2">
+  <strong><%= t("contact.info.github_label") %>:</strong>
+  <a href="<%= t('contact.info.github_url') %>" target="_blank" class="clean-link">
+    <%= t("contact.info.github_text") %>
+  </a>
+</p>
+
+<p class="mb-2">
+  <strong><%= t("contact.info.location_label") %>:</strong>
+  <%= t("contact.info.location_value") %>
+</p>
+
+<p class="mb-0 text-muted mt-4">
+  <%= t("contact.info.availability") %>
+</p>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

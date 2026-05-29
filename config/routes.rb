@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   # =========================
   scope "(:locale)", locale: /en|de|nl/ do
     # Root page (localized)
-    root "pages#index"
+    root "pages#home"
 
     # Pages
-    get "pages/index"
-
+    get "about", to: "pages#about"
+    get "contact", to: "pages#contact"
     # Add more pages here later
     # get "about", to: "pages#about"
     # get "contact", to: "pages#contact"
