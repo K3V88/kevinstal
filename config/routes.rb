@@ -2,18 +2,15 @@ Rails.application.routes.draw do
   # =========================
   # ROOT REDIRECT (redirect to default locale)
   # =========================
-  root to: redirect("/en")
 
   # =========================
   # LOCALE SUPPORTED ROUTES
   # =========================
   scope "(:locale)", locale: /en|de|nl/ do
-    # Root page (localized)
-    get "", to: "pages#home"
+  root "pages#home"
 
-    # Pages
-    get "about", to: "pages#about"
-    get "contact", to: "pages#contact"
+  get "about", to: "pages#about"
+  get "contact", to: "pages#contact"
     # Add more pages here later
     # get "about", to: "pages#about"
     # get "contact", to: "pages#contact"

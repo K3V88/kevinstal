@@ -103,7 +103,7 @@ config.action_mailer.smtp_settings = {
   port: 587,
   domain: "gmx.ch",
   authentication: :login,
-  user_name: ENV.fetch("GMX_SMTP_USER_NAME"),
+  user_name: ENV.fetch("GMX_SMTP_USER_NAME", "kevin.stal@gmx.ch"),
   password: ENV.fetch("GMX_APP_PASSWORD"),
   enable_starttls_auto: true
 }
