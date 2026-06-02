@@ -59,7 +59,7 @@
 }
 
 /* =========================
-   RIGHT SIDE GROUP (FLAGS + HAMBURGER)
+   RIGHT SIDE GROUP
    ========================= */
 
 .navbar-right {
@@ -76,6 +76,31 @@
 .lang-switcher {
   display: flex;
   align-items: center;
+}
+
+.mobile-language-item {
+  display: none !important;
+}
+
+.navbar-custom .mobile-language-label {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.navbar-custom .mobile-language-link,
+.navbar-custom .mobile-language-link:hover,
+.navbar-custom .mobile-language-link:focus,
+.navbar-custom .mobile-language-link:visited {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.navbar-custom .mobile-language-link.active,
+.navbar-custom .mobile-language-link.active:hover,
+.navbar-custom .mobile-language-link.active:focus,
+.navbar-custom .mobile-language-link.active:visited {
+  color: #ffd84d !important;
+  font-weight: 700;
+  text-decoration: none !important;
 }
 
 /* LINKS */
@@ -97,22 +122,10 @@
   font-weight: bold;
 }
 
-/* =========================
-   DESKTOP LANGUAGE STYLE
-   ========================= */
-
 @media (min-width: 768px) {
 
   .lang-switcher {
     padding-left: 1.5rem;
-  }
-
-  .lang-desktop {
-    display: inline;
-  }
-
-  .lang-mobile-flag {
-    display: none;
   }
 
   .lang-link {
@@ -124,32 +137,47 @@
   }
 }
 
-/* =========================
-   MOBILE LANGUAGE STYLE
-   ========================= */
-
 @media (max-width: 767.98px) {
 
-  .lang-desktop {
-    display: none;
+  .navbar-top-right .lang-switcher-desktop {
+    display: none !important;
   }
 
-  .lang-mobile-flag {
-    display: inline;
-    font-size: 1.1rem;
+  .mobile-language-item {
+    display: block !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    margin-top: 0.35rem;
+    padding: 0.85rem 10px 0;
   }
 
-  /* STACK FLAGS VERTICALLY */
-  .lang-switcher {
+  .mobile-language-label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+  }
+
+  .mobile-language-links {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.2rem;
+    gap: 0.5rem;
   }
 
-  .lang-link {
-    padding: 0;
-    margin: 0;
+  .mobile-language-link {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 4px;
+    flex: 1;
+    padding: 0.55rem 0.6rem;
+    text-align: center;
+    transition: all 0.25s ease;
+  }
+
+  .mobile-language-link.active,
+  .mobile-language-link.active:hover,
+  .mobile-language-link.active:focus,
+  .mobile-language-link.active:visited {
+    border-color: #ffd84d;
   }
 }
 

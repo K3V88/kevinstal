@@ -1,24 +1,22 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark px-3 navbar-custom">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark px-3 navbar-custom" data-controller="navbar">
 
   <!-- LEFT: LOGO -->
   <%= link_to "Kevin Stal",
               root_path(locale: I18n.locale),
               class: "navbar-brand logo-font" %>
 
+  <% language_labels = { de: "Deutsch", en: "English", nl: "Nederlands" } %>
+
   <!-- RIGHT TOP BAR GROUP -->
   <div class="navbar-top-right">
 
-    <!-- LANGUAGE -->
-    <div class="lang-switcher">
+    <!-- DESKTOP LANGUAGE -->
+    <div class="lang-switcher lang-switcher-desktop d-none d-md-flex">
       <% [:de, :en, :nl].each do |lang| %>
         <%= link_to url_for(locale: lang),
             class: "lang-link #{'active' if I18n.locale == lang}" do %>
 
-          <span class="lang-mobile-flag">
-            <%= {de: "🇩🇪", en: "🇬🇧", nl: "🇳🇱"}[lang] %>
-          </span>
-
-          <span class="lang-desktop"><%= lang.to_s.upcase %></span>
+          <%= lang.to_s.upcase %>
 
         <% end %>
       <% end %>
@@ -28,7 +26,8 @@
     <button class="navbar-toggler custom-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNav">
+            data-bs-target="#navbarNav"
+            data-navbar-target="toggler">
 
       <span></span>
       <span></span>
@@ -39,7 +38,7 @@
   </div>
 
   <!-- COLLAPSIBLE MENU -->
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="collapse navbar-collapse" id="navbarNav" data-navbar-target="collapse">
 
     <ul class="navbar-nav nav-links">
 
@@ -59,6 +58,18 @@
 <%= link_to t("nav.contact"),
   contact_path(locale: I18n.locale),
   class: "nav-link nav-underline js-nav-link #{'active' if current_page?(contact_path(locale: I18n.locale))}" %>
+      </li>
+
+      <li class="nav-item mobile-language-item d-md-none">
+        <span class="mobile-language-label"><%= t("home.sections.languages") %></span>
+        <div class="mobile-language-links">
+          <% [:de, :en, :nl].each do |lang| %>
+            <%= link_to language_labels[lang],
+                url_for(locale: lang),
+                class: "mobile-language-link #{'active' if I18n.locale == lang}",
+                data: { action: "navbar#keepOpen" } %>
+          <% end %>
+        </div>
       </li>
 
     </ul>
