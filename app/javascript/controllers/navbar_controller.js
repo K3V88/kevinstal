@@ -5,6 +5,7 @@ export default class extends Controller {
 
   connect() {
     if (sessionStorage.getItem("keepNavbarOpen") !== "true") return
+    if (document.documentElement.hasAttribute("data-turbo-preview")) return
 
     sessionStorage.removeItem("keepNavbarOpen")
 

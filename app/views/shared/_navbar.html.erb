@@ -66,7 +66,7 @@
             <%= link_to language_labels[lang],
                 url_for(locale: lang),
                 class: "mobile-language-link #{'active' if I18n.locale == lang}",
-                data: { action: "navbar#keepOpen" } %>
+                data: { action: "pointerdown->navbar#keepOpen click->navbar#keepOpen" } %>
           <% end %>
         </div>
       </li>
