@@ -9,7 +9,6 @@ class PagesController < ApplicationController
   end
 
   def create_contact
-    logger.warn "GMX password is: #{Rails.application.config.action_mailer.smtp_settings[:password].inspect}"
     ContactMailer.with(
       name: params[:name],
       email: params[:email],
