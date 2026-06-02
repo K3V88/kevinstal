@@ -52,8 +52,11 @@ COPY . .
 RUN bundle exec bootsnap precompile -j 1 app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 RAILS_ENV=production ./bin/rails assets:precompile --trace
-
+RUN SECRET_KEY_BASE_DUMMY=1 \
+    GMX_APP_PASSWORD=dummy \
+    GMX_SMTP_USER_NAME=dummy \
+    RAILS_ENV=production \
+    ./bin/rails assets:precompile
 
 
 
