@@ -87,4 +87,24 @@ Rails.application.configure do
   #
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  #
+  config.action_mailer.delivery_method = :smtp
+config.action_mailer.perform_caching = false
+config.action_mailer.perform_deliveries = true
+config.action_mailer.raise_delivery_errors = true
+
+config.action_mailer.default_url_options = {
+  host: ENV.fetch("HOST_NAME", "kevinstal.onrender.com"),
+  protocol: "https"
+}
+
+config.action_mailer.smtp_settings = {
+  address: "smtp.gmx.com",
+  port: 587,
+  domain: "gmx.ch",
+  authentication: :login,
+  user_name: ENV.fetch("GMX_SMTP_USER_NAME"),
+  password: ENV.fetch("GMX_APP_PASSWORD"),
+  enable_starttls_auto: true
+}
 end

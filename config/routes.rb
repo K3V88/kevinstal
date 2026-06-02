@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     # Add more pages here later
     # get "about", to: "pages#about"
     # get "contact", to: "pages#contact"
+    post "contact", to: "pages#create_contact"
   end
 
   # =========================

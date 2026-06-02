@@ -93,3 +93,11 @@ de:
       message_placeholder: "Schreibe eine Nachricht..."
 
       submit: "Abschicken"
+
+    thank_you:
+      title: "Danke!"
+      body: "Deine Nachricht wurde versendet. Ich melde mich bald bei dir."
+
+    error:
+      title: "Etwas ist schiefgelaufen"
+      body: "Bitte versuche es erneut oder kontaktiere mich direkt unter %{email}."

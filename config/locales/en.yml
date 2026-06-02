@@ -91,3 +91,11 @@ en:
       message_placeholder: "Write your message..."
 
       submit: "Send"
+
+    thank_you:
+      title: "Thank you!"
+      body: "Your message has been sent. I’ll get back to you soon."
+
+    error:
+      title: "Something went wrong"
+      body: "Please try again or contact me directly at %{email}."

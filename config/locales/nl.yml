@@ -94,3 +94,11 @@ nl:
       message_placeholder: "Schrijf je bericht..."
 
       submit: "Versturen"
+
+    thank_you:
+      title: "Bedankt!"
+      body: "Je bericht is verzonden. Ik neem snel contact met je op."
+
+    error:
+      title: "Er is iets misgegaan"
+      body: "Probeer het opnieuw of neem direct contact met me op via %{email}."

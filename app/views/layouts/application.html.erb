@@ -28,6 +28,14 @@
 
   <%= render "shared/navbar" %>
 
+  <div class="container">
+    <% flash.each do |type, message| %>
+      <div class="alert alert-<%= type == "notice" ? "success" : "danger" %>">
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+
 <main class="flex-grow-1 hero-section position-relative">
     <%= yield %>
   </main>
