@@ -46,8 +46,7 @@ de:
         <br><br>
         Schon in jungen Jahren war ich fasziniert davon, wie Programmiersprachen genutzt werden können, um aus einfachen Ideen echte, funktionierende Produkte zu machen.
         <br><br>
-        Heute bin ich ein leidenschaftlicher Ruby-on-Rails-Entwickler, der sich auf den Aufbau sauberer, skalierbarer und wartbarer Webanwendungen konzentriert.
-
+        Nach meinem Studium in International Business und Sprachen in den Niederlanden bin ich in die Schweiz gezogen, wo ich professionelle Erfahrung in der Luftfahrtindustrie gesammelt habe, bevor ich den Wechsel in die Programmierung gemacht habe. Heute bin ich ein leidenschaftlicher Ruby-on-Rails-Entwickler, der sich darauf konzentriert, saubere, skalierbare und wartbare Webanwendungen zu entwickeln.
     facts:
       name: "Name"
       age: "Alter"
@@ -63,7 +62,7 @@ de:
   contact:
     hero:
       title: "Kontakt aufnehmen"
-      subtitle: "Ich freue mich darauf, von Ihnen zu hören! Bitte zögern Sie nicht, mich über das folgende Formular zu kontaktieren oder mir direkt eine E-Mail zu senden."
+      subtitle: "Ich freue mich darauf, von dir zu hören! Bitte zögere nicht, mich über das folgende Formular zu kontaktieren oder mir direkt eine E-Mail zu senden."
     info:
       name_label: "Name"
       name_value: "Kevin Stal"
