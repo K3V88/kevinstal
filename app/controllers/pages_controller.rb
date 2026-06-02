@@ -25,6 +25,8 @@ class PagesController < ApplicationController
       format.html { redirect_to contact_path, notice: "Message sent." }
     end
   rescue StandardError => e
+    Rails.logger.error("Contact form delivery failed: #{e.class}: #{e.message}")
+
     respond_to do |format|
       format.turbo_stream do
         render turbo_stream: turbo_stream.replace(

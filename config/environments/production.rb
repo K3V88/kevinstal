@@ -99,7 +99,7 @@ Rails.application.configure do
   }
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmx.com",
+    address: "mail.gmx.net",
     port: 587,
     domain: "gmx.ch",
     authentication: :login,
